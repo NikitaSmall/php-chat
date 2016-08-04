@@ -1,0 +1,19 @@
+{
+    "name": "bgclassteacher/www",
+    "description": "test chat application",
+    "type": "app",
+    "autoload": {
+        "psr-0": {
+            "MyApp": "src"
+        }
+    },
+    "require": {
+        "cboden/ratchet": "^0.3.5"
+    },
+    "authors": [
+        {
+            "name": "nikitasmall",
+            "email": "nikitasosnov92@gmail.com"
+        }
+    ]
+}
