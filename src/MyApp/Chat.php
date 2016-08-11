@@ -3,7 +3,7 @@ namespace MyApp;
 use Ratchet\MessageComponentInterface;
 use Ratchet\ConnectionInterface;
 
-class MyChat implements MessageComponentInterface {
+class Chat implements MessageComponentInterface {
     protected $clients;
 
     public function __construct() {
@@ -16,9 +16,9 @@ class MyChat implements MessageComponentInterface {
 
     public function onMessage(ConnectionInterface $from, $msg) {
         foreach ($this->clients as $client) {
-            if ($from != $client) {
+            // if ($from != $client) {
                 $client->send($msg);
-            }
+            // }
         }
     }
 
