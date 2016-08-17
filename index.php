@@ -28,20 +28,6 @@
 	            </div>
 	            <div class="panel-body">
 					<ul class="media-list" id="chat-body">
-
-			            <li class="media">
-			                <div class="media-body">
-			                    <div class="media">
-			                        <div class="media-body" >
-			                            Message
-			                            <br />
-			                           <small class="text-muted">Alex Deo | 23rd June at 5:00pm</small>
-			                            <hr />
-			                        </div>
-			                    </div>
-			                </div>
-			            </li>
-
 			        </ul>
 	            </div>
 	            <div class="panel-footer">

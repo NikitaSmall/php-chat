@@ -3,6 +3,17 @@ $(document).ready(function () {
 
 	conn.onmessage = function(e) {
 		var message = JSON.parse(e.data);
+		console.log(e.data);
+		if (Array.isArray(message)) {
+			message.forEach(function(m) {
+				showMessage(JSON.parse(m));
+			});
+		} else {
+			showMessage(message);
+		}
+	};
+
+	function showMessage(message) {
 		$('#chat-body').append(
 			'<li class="media">' +
                 '<div class="media-body">' +
@@ -18,11 +29,10 @@ $(document).ready(function () {
                 '</div>' +
             '</li>'
 		);
-	};
+	}
 
 	conn.onopen = function(e) {
 	    console.log("Connection established!");
-	    conn.send('Hello Me!');
 	};
 
 	$('#send-message').click(function () {
